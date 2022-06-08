@@ -1,0 +1,429 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+.home{
+    min-height: 100vh;
+    background: url("https://images.unsplash.com/photo-1586593794369-c9afd3ee5e12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+ nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.brandname{
+    font-size: 27px;
+    margin-left: 30px ;
+    padding: 10px;
+    font-style: italic;
+    color: aliceblue;
+}
+.nav_links ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.nav_links li{
+    list-style: none;
+}
+.nav_links li a{
+    text-decoration: none;
+    color: black;
+    padding: 16px;
+    display: block;
+    font-weight: 500;
+    color: aliceblue;
+}
+.nav_links li:hover{
+    background-color: rgba(0, 0, 0,0.3);
+}
+
+.togglebtn{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    top: 15px;
+    right: 20px;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+.togglebtn .bar{
+        height: 3px;
+        width: 100%;
+        background-color: aliceblue;
+        border-radius: 10px;
+}
+.home h1{
+    text-align: center;
+    font-size: 60px;
+    font-weight: 700;
+    color: aliceblue;
+    margin-top: 180px;
+}
+.home p{
+    text-align: center;
+    color: aliceblue;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.button{
+    margin: 10px;
+  
+}
+.button button{
+    width: 250px;
+    height: 50px;
+    font-size: 16px;
+    color: aliceblue;
+    background-color: rgba(0, 0, 0,0.3);
+    border: 1px solid aliceblue;
+    cursor: pointer;
+}
+
+@media  screen and (max-width:652px) {
+      .togglebtn{
+          display: flex;
+      }
+      .nav_links{
+        display:none;
+        width: 100%;
+      }
+       nav{
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-start;
+      }
+      .nav_links ul{
+          width: 100%;
+          flex-direction: column;
+      }
+      .nav_links li{
+          text-align: center;
+      }
+      .nav_links li a{
+        padding:10px 16px; 
+        border-bottom: 1px solid silver;
+      }
+      .nav_links.active{
+          display: flex;
+      }
+      .home{
+          background-position: initial;
+          background-size: cover;
+        
+      }
+      .home h1{
+          font-size: 40px;
+      }
+      .home p{
+          padding: 6px;
+      }
+      .btn{
+          flex-direction: column;
+      }
+      .button button{
+          width: 220px;
+          height:50px;
+      }
+}
+/*news*/
+.news{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    margin-top: 50px;
+}
+.n-btn button{
+    width: 150px;
+    height: 50px;
+    font-size: 16px;
+    color: aliceblue;
+    background-color: black;
+    border: 1px solid aliceblue;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 10px;
+}
+.news-flex{
+    width: 90%;
+    display: flex;
+    margin: auto;
+    padding:48px 0;
+    justify-content: center;
+
+}
+.news-flex .flex{
+    width: 30%;
+    min-height: 60vh;
+    border: 0.1px solid silver;
+    margin: 10px;
+}
+.flex h3{
+    font-size: 23px;
+    font-weight: 700px;
+    text-align: left;
+    padding: 0 25px;
+}
+.flex h5{
+    font-size: 16px;
+    font-weight: normal;
+    text-align: left;
+    padding: 0 25px;
+}
+.flex a{
+    float: left;
+    padding: 0 25px;
+    padding-bottom: 20px;
+    text-decoration: none;
+    color: brown;
+}
+.flex a:hover{
+    color: black;
+}
+.image{
+    height: 200px;
+    background-color: red;
+}
+.img1{
+    background: url("https://media.istockphoto.com/photos/vanuatu-romantic-sunset-jetty-efate-island-picture-id1141164546?b=1&k=20&m=1141164546&s=170667a&w=0&h=Lm6eRSFMlBjZaqQXgzuEzaIdpU5xQ_0oNzw00NLPngI=");
+    background-position: center center;
+    background-size: cover;
+}
+.img2{
+    background: url("https://us.123rf.com/450wm/stegarau/stegarau1602/stegarau160200041/53959199-perspective-view-of-a-wooden-pier-on-the-pond-at-sunset-with-perfectly-specular-reflection.jpg?ver=6");
+    background-position: center center;
+    background-size: cover;
+}
+.img3{
+    background: url("https://images.pexels.com/photos/132037/pexels-photo-132037.jpeg?cs=srgb&dl=pexels-pok-rie-132037.jpg&fm=jpg");
+    background-position: center center;
+    background-size: cover;
+}
+
+
+@media  screen and (max-width:652px){
+    .news-flex{
+        flex-direction: column;
+    }
+    .news-flex .flex{
+        width: 100%;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+   .news-info p{
+       padding: 4px;
+   }
+}
+
+/*project*/
+.project{
+    text-align: center;
+    justify-content: center;
+    min-height: 60vh;
+    margin-top: 40px;
+}
+.project-info{
+    margin-bottom: 50px;
+}
+.p-flex{
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+.p-flex .pro-flex{
+    display: block;
+    width: 25%;
+    height: 300px;
+
+}
+.p-flex .pro-flex:hover{
+         opacity: 0.7;
+}
+
+
+@media  screen and (max-width:652px){
+    .p-flex .pro-flex{
+        width: 50%;
+    }
+}
+
+/*team*/
+
+.team{
+    text-align: center;
+    justify-content: center;
+    min-height: 80vh;
+}
+.t-flex{
+    width: 100%;
+    display: flex;
+    margin: auto;
+    padding: 48px 0;
+    justify-content: center;
+}
+.team-flex{
+    width: 25%;
+    margin: 10px;
+    padding: 20px;
+    transition: 0.4s;
+}
+.team-flex:hover{
+    background-color: #ddd;
+    border-radius: 20px;
+}
+.team-flex .name{
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px;
+}
+.team-flex .job{
+    font-size: 16px;
+    color: darkslategray;
+    padding: 8px;
+}
+.team-flex .about{
+    padding: 6px;
+}
+.team-flex .social a{
+    display: inline-block;
+    padding: 6px;
+}
+.team-flex .social i{
+    color: brown;
+}
+.team-flex .social i:hover{
+    transform: scale(1.5);
+}
+.team-flex img{
+    width: 150px;
+    height: 150px;
+    clip-path: circle();
+}
+
+@media  screen and (max-width:652px){
+    .team-info p{
+          padding: 4px;
+    }
+    .t-flex{
+        flex-direction: column;
+    }
+    .team-flex{
+        width: 100%;
+        padding: 15px;
+        margin: auto;
+    }
+}
+
+
+/*contact*/
+.contact{
+    text-align: center;
+    justify-content: center;
+    min-height: 70vh;
+    background-image: url("https://images.pexels.com/photos/87812/pexels-photo-87812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+}
+.contact-info{
+    padding-top: 40px;
+    margin-bottom: 40px;
+}
+.c-flex{
+    width: 80%;
+    display: flex;
+    margin: auto;
+    padding: 38px 0;
+    justify-content: center;
+}
+.c-flex .info{
+    width: 30%;
+    text-align: left;
+    padding: 20px;
+    margin: 10px;
+}
+.c-flex .form{
+    width: 50%;
+    margin: 10px;
+}
+.form #name{
+    width: 80%;
+    height: 30px;
+    margin: 5px;
+}
+.form #email{
+    width: 80%;
+    height: 30px;
+    margin: 5px;
+}
+.form #mess{
+    width: 80%;
+    height: 150px;
+    margin: 5px;
+}
+#btn{
+    width: 20%;
+    height: 40px;
+    margin: 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+@media  screen and (max-width:652px){
+    .contact{
+        color: aliceblue;
+    }
+     .c-flex{
+         flex-direction: column-reverse;
+     }
+     .c-flex .info{
+      
+         width: 100%;
+     }
+     .c-flex .form{
+        width: 100%;
+        margin: auto;
+    }
+    .form #name{
+        width: 100%;
+        height: 30px;
+        margin: 5px;
+    }
+    .form #email{
+        width: 100%;
+        height: 30px;
+        margin: 5px;
+    }
+    .form #mess{
+        width: 100%;
+    }
+    #btn{
+        width: 40%;
+    }
+}
+
+footer{
+    text-align: center;
+    height: 50px;
+    padding: 4px;
+}
